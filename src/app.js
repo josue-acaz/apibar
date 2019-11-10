@@ -1,11 +1,15 @@
 import express from 'express';
-import routes from './routes';
+
+// Importar rotas
+import indexRoute from './routes/index';
 
 class App {
   constructor() {
     this.server = express();
 
     this.middlewares();
+
+    // Carregar rotas
     this.routes();
   }
 
@@ -13,8 +17,9 @@ class App {
     this.server.use(express.json());
   }
 
+  // Rotas
   routes() {
-    this.server.use(routes);
+    this.server.use(indexRoute);
   }
 }
 
