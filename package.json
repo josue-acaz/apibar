@@ -6,7 +6,7 @@
     "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js",
     "start": "nodemon app.js",
-    "gendoc": "apidoc -f app.js -o public/apidoc"
+    "gendoc": "apidoc -f src/routes/index.js -o public/apidoc"
   },
   "license": "MIT",
   "dependencies": {
